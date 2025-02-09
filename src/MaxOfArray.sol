@@ -7,6 +7,13 @@ contract MaxOfArray {
             // your code here
             // return the maximum value in the array
             // revert if array is empty
+
+            let len := mload(arr)
+
+            if iszero(len) {
+                revert(0, 0)
+            }
+
         }
     }
 }

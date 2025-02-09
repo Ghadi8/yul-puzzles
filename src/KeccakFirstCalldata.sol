@@ -9,6 +9,10 @@ contract KeccakFirstCalldata {
             // Hint: use keccak256(offset, size)
             // Hint: don't forget to account for the offset
             // read this article for hints: https://www.rareskills.io/post/abi-encoding
+
+            calldatacopy(0, 4, 32)
+            mstore(0x20, keccak256(0, 32))
+            return (0x20, 0x20)
         }
     }
 }

@@ -8,6 +8,10 @@ contract KeccakSecondCalldata {
             // return the keccak hash of the SECOND argument in the calldata
             // Hint: use keccak256(offset, size)
             // solve KeccakFirstCalldata before this problem
+
+            calldatacopy(0, 36, 32)
+            mstore(0x20, keccak256(0, 32))
+            return(0x20, 32)
         }
     }
 }

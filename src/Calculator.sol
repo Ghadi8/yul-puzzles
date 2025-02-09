@@ -12,7 +12,7 @@ contract Calculator {
             // add x and y
 
             mstore(0, add(x, y))
-            return(0, 32)     
+            return(0, 32)
         }
     }
 
