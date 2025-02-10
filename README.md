@@ -33,7 +33,7 @@ Go through the puzzles sequentially
 14. [KeccakFirstCalldata](https://github.com/RareSkills/yul-puzzles/blob/main/src/KeccakFirstCalldata.sol) (_solved_)
 15. [KeccakSecondCalldata](https://github.com/RareSkills/yul-puzzles/blob/main/src/KeccakSecondCalldata.sol) (_solved_)
 16. [LengthOfDynamicArray](https://github.com/RareSkills/yul-puzzles/blob/main/src/LengthOfDynamicArray.sol) (_solved_)
-17. [MaxOfArray](https://github.com/RareSkills/yul-puzzles/blob/main/src/MaxOfArray.sol)
+17. [MaxOfArray](https://github.com/RareSkills/yul-puzzles/blob/main/src/MaxOfArray.sol) (_solved_)
 18. [ReadFromStorage](https://github.com/RareSkills/yul-puzzles/blob/main/src/ReadFromStorage.sol) (_solved_)
 19. [WriteToStorage](https://github.com/RareSkills/yul-puzzles/blob/main/src/WriteToStorage.sol) (_solved_)
 20. [ReadFromFixedArray](https://github.com/RareSkills/yul-puzzles/blob/main/src/ReadFromFixedArray.sol) (_solved_)
