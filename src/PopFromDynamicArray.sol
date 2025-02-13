@@ -10,6 +10,12 @@ contract PopFromDynamicArray {
             // pop the last element from the dynamic array `popFromMe`
             // dont forget to clean the popped element's slot.
             // Hint: https://www.rareskills.io/post/solidity-dynamic
+
+            let arrLen := sload(0)
+
+            mstore(0, 0)
+            sstore(add(keccak256(0, 32), sub(arrLen, 1)), 0)
+            sstore(0, sub(arrLen, 1))
         }
     }
 
