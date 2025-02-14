@@ -12,7 +12,6 @@ contract keccakX {
             mstore(0, x)
             mstore(0x20, keccak256(0, 32))
             return(0x20, 32)
-
         }
     }
 }

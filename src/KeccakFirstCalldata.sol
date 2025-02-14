@@ -12,7 +12,7 @@ contract KeccakFirstCalldata {
 
             calldatacopy(0, 4, 32)
             mstore(0x20, keccak256(0, 32))
-            return (0x20, 0x20)
+            return(0x20, 0x20)
         }
     }
 }

@@ -12,19 +12,12 @@ contract Tenary {
             // else, store `30`
 
             switch gt(a, b)
-            case 1 {
-                sstore(0, 10)
-            }
+            case 1 { sstore(0, 10) }
             case 0 {
                 switch gt(b, c)
-                case 1 {
-                    sstore(0, 20)
-                }
-                case 0 {
-                    sstore(0, 30)
-                }
+                case 1 { sstore(0, 20) }
+                case 0 { sstore(0, 30) }
             }
-
         }
     }
 }

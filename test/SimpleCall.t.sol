@@ -6,6 +6,7 @@ import {SimpleCall} from "../src/SimpleCall.sol";
 
 contract T {
     bool public x = false;
+
     function foo() external {
         x = true;
     }
