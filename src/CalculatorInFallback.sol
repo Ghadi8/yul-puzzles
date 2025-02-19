@@ -14,5 +14,26 @@ contract CalculatorInFallback {
         // sub(uint256,uint256) -> 0xb67d77c5 (sub two numbers and store result in storage)
         // mul(uint256,uint256) -> 0xc8a4ac9c (mul two numbers and store result in storage)
         // div(uint256,uint256) -> 0xa391c15b (div two numbers and store result in storage)
+        assembly {
+        let funcSelector := shr(224, calldataload(0x00))
+
+        let firstUint := calldataload(0x04)
+
+        let secondUint := calldataload(0x24)
+
+        switch funcSelector
+        case 0x771602f7 {
+            sstore(0x00, add(firstUint, secondUint))
+        }
+        case 0xb67d77c5 {
+            sstore(0x00, sub(firstUint, secondUint))
+        }
+        case 0xc8a4ac9c {
+            sstore(0x00, mul(firstUint, secondUint))
+        }
+        case 0xa391c15b {
+            sstore(0x00, div(firstUint, secondUint))
+        }
+    }
     }
 }

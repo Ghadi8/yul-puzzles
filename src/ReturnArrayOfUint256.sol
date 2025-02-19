@@ -6,6 +6,33 @@ contract ReturnArrayOfUint256 {
         assembly {
             // your code here
             // return an array of [a,b,c]
+
+            let ptr := mload(0x40)
+
+            let start := ptr
+
+            let offset := 0x20
+            let length := 0x03
+
+            mstore(ptr, offset)
+            ptr := add(ptr, 0x20)
+
+            mstore(ptr, length)
+            ptr := add(ptr, 0x20)
+
+            mstore(ptr, a)
+            ptr := add(ptr, 0x20)
+
+            mstore(ptr, b)
+            ptr := add(ptr, 0x20)
+
+            mstore(ptr, c)
+            ptr := add(ptr, 0x20)
+
+            let size := sub(ptr, start)
+
+            return(start, size)
+           
         }
     }
 }
