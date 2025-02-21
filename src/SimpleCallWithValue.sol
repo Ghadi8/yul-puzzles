@@ -8,6 +8,12 @@ contract SimpleCallWithValue {
             // call "t.foo()" while sending msg.value
             // hint: "foo()" has function selector 0xc2985578
             // hint: callvalue() returns the value of the current call
+
+            mstore(0x00, shl(224, 0xc2985578))
+            let result := call(gas(), t, callvalue(), 0x00, 0x04, 0, 0)
+            if iszero(result) {
+                revert(0, 0)
+            }
         }
     }
 }

@@ -10,6 +10,10 @@ contract SendAllEther {
             // hint: use the `call` opcode: https://docs.soliditylang.org/en/latest/yul.html#evm-dialect
             // hint: use the `selfbalance()` opcode
 
+            let result := call(gas(), to, selfbalance(), 0, 0, 0, 0)
+            if iszero(result) {
+                revert(0, 0)
+            }
         }
     }
 }

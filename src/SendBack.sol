@@ -8,6 +8,11 @@ contract SendBack {
             // your code here
             // whatever amount of ether is sent to the contract, send it back to the sender
             // hint: use callvalue() to get the amount of ether sent to the contract
+
+            let result := call(gas(), caller(), callvalue(), 0, 0, 0, 0)
+            if iszero(result) {
+                revert(0, 0)
+            }
         }
     }
 }
