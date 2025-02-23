@@ -26,7 +26,7 @@ contract ReadFromPacked64 {
 
             let v := and(r, 0xFFFFFFFFFFFFFFFF)
 
-            mstore(0x00, r)
+            mstore(0x00, v)
 
            return(0x00, 0x20)
         }

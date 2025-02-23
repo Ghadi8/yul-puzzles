@@ -27,9 +27,7 @@ contract TransferFrom {
             mstore(0x24, msgsender)
             mstore(0x44, amount)
             let result := call(gas(), tokenAddr, 0, 0x00, 0x64, 0, 0)
-            if iszero(result) {
-                revert(0, 0)
-            }
+            if iszero(result) { revert(0, 0) }
         }
     }
 }

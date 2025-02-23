@@ -11,9 +11,7 @@ contract SimpleCallWithValue {
 
             mstore(0x00, shl(224, 0xc2985578))
             let result := call(gas(), t, callvalue(), 0x00, 0x04, 0, 0)
-            if iszero(result) {
-                revert(0, 0)
-            }
+            if iszero(result) { revert(0, 0) }
         }
     }
 }

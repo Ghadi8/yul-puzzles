@@ -18,7 +18,19 @@ contract Log2 {
             //   bin(6) = 0110, so log2(6) = 2
             //   bin(7) = 0111, so log2(6) = 2
             //   bin(8) = 1000, so log2(6) = 3
-  
+            
+            if iszero(x) {
+                revert(0x00, 0x00)
+            }
+
+            let i := 0x00
+            for { } gt(x, 0x01) { } {
+                x := div(x, 0x02)
+                i := add(i, 0x01)
+            }
+
+            mstore(0x00, i)
+            return(0x000, 0x20)
         }
     }
 }

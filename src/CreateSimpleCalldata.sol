@@ -11,11 +11,11 @@ contract CreateSimpleCalldata {
             // hint: use calldatacopy to copy the deploymentBytecode to memory
 
             let offset := calldataload(0x04)
-            let len:= calldataload(add(0x04, offset))
+            let len := calldataload(add(0x04, offset))
             calldatacopy(0x00, add(offset, 0x24), len)
             let addr := create(0, 0x00, len)
             mstore(0x80, addr)
             return(0x80, 0x20)
-       }
+        }
     }
 }

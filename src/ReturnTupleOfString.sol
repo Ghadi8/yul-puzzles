@@ -20,7 +20,6 @@ contract ReturnTupleOfString {
             mstore(0xA0, "RareSkills")
 
             return(0x00, 0xC0)
-            
         }
     }
 }

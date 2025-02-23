@@ -12,6 +12,35 @@ contract SquareRoot {
             // hint: be careful of overflow
             // hint: use a switch statement to handle 0, 1, and the general case
             // hint: use break to exit the loop if the new guess is the same as the old guess
+
+            switch x
+            case 0 {
+                mstore(0x00, 0x00)
+                return(0x00, 0x20)
+            }
+            case 1 {
+                mstore(0x00, 0x01)
+                return(0x00, 0x20)
+            }
+            default{
+                let initialVal := div(x, 0x02)
+                let val := initialVal
+                for {
+                    let i := 0
+                } lt(i, x) {
+                    i := add(i, 1)
+                } {
+                    let currentVal := initialVal
+                    initialVal := div(add(initialVal, div(x, initialVal)), 2)
+                    if or(eq(currentVal, initialVal), eq(currentVal, add(val, 1))) {
+                        mstore(0x00, initialVal)
+                        return(0x00, 0x20)
+                    }
+             
+                    val := currentVal
+                }
+                
+            }
         }
     }
 }

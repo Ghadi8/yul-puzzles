@@ -92,11 +92,11 @@ Go through the puzzles sequentially
 73. [CreateSimpleCalldata](https://github.com/RareSkills/yul-puzzles/blob/main/src/CreateSimpleCalldata.sol) (_solved_)
 74. [DeployOneByte](https://github.com/RareSkills/yul-puzzles/blob/main/src/DeployOneByte.sol) (_solved_)
 75. [DeployNBytes](https://github.com/RareSkills/yul-puzzles/blob/main/src/DeployNBytes.sol) (_solved_)
-76. [SquareRoot](https://github.com/RareSkills/yul-puzzles/blob/main/src/SquareRoot.sol)
+76. [SquareRoot](https://github.com/RareSkills/yul-puzzles/blob/main/src/SquareRoot.sol) (_solved_)
 77. [Division](https://github.com/RareSkills/yul-puzzles/blob/main/src/Division.sol) (_solved_)
 78. [AbsoluteValue](https://github.com/RareSkills/yul-puzzles/blob/main/src/AbsoluteValue.sol) (_solved_)
-79. [SetBit](https://github.com/RareSkills/yul-puzzles/blob/main/src/SetBit.sol)
-80. [Log2](https://github.com/RareSkills/yul-puzzles/blob/main/src/Log2.sol)
+79. [SetBit](https://github.com/RareSkills/yul-puzzles/blob/main/src/SetBit.sol) (_solved_)
+80. [Log2](https://github.com/RareSkills/yul-puzzles/blob/main/src/Log2.sol) (_solved_)
 
 ## Acknowledgement
 
